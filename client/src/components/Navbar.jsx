@@ -12,10 +12,9 @@ const Navbar = () => {
   };
 
   const linkClass = ({ isActive }) =>
-    `px-4 py-2 rounded transition ${
-      isActive
-        ? "bg-indigo-600 text-white"
-        : "text-gray-300 hover:bg-slate-700"
+    `px-4 py-2 rounded transition ${isActive
+      ? "bg-indigo-600 text-white"
+      : "text-gray-300 hover:bg-slate-700"
     }`;
 
   return (
@@ -56,14 +55,20 @@ const Navbar = () => {
             <NavLink to="/student" className={linkClass}>
               Dashboard
             </NavLink>
+
+            <NavLink to="/profile" className={linkClass}>
+              Profile
+            </NavLink>
+
             <button
               onClick={logout}
-              className="bg-red-500 hover:bg-red-600 px-4 py-2 rounded text-white"
+              className="bg-red-500 px-4 py-2 rounded text-white"
             >
               Logout
             </button>
           </>
         )}
+
       </div>
     </nav>
   );
